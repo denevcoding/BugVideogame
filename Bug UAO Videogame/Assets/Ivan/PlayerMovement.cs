@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+        readyToJump = true;
     }
 
     private void Update()
@@ -50,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
           rb.drag = groundDrag;
         else
           rb.drag = 0;
+
+
     }
 
     private void FixedUpdate()
@@ -80,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
 
         // on ground
         if(grounded)
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
 
         // in air 
         else if(!grounded)
@@ -114,4 +118,5 @@ public class PlayerMovement : MonoBehaviour
     {
         readyToJump = true;
     }
+
 }
