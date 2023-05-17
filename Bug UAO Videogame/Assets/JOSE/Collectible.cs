@@ -2,28 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Collectible : MonoBehaviour
 {
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   // public AudioSource collectSound;
 
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Colliton " + gameObject.name);
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger " + gameObject.name);
+     //   collectSound.Play();
+        ScoringSystem.score += 1;       
+        Destroy(gameObject);
+
+
     }
+
 }
