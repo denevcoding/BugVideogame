@@ -22,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     bool grounded;
 
+    [Header("Camera Effects")]
+    public ThirdPersonCam cam;
+    public float grappleFov = 95f;
+
+
+
     public Transform orientation;
 
     float horizontalInput;
@@ -139,18 +145,43 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
     }
 
+    private bool enabledMovementOnNextTouch;
+
+
     public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
     {
         activeGrapple = true;
 
         velocityToSet = CalculateJumpVelocity(transform.position, targetPosition, trajectoryHeight);
         Invoke(nameof(SetVelocity), 0.1f);
+
+        Invoke(nameof(ResetRestrictions), 3f);
     }
 
     private Vector3 velocityToSet;
     private void SetVelocity()
     {
+        enabledMovementOnNextTouch = true;
         rb.velocity = velocityToSet;
+
+        cam.DoFov(grappleFov);
+    }
+
+    public void ResetRestrictions()
+    {
+        activeGrapple = false;
+        cam.DoFov(85f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (enabledMovementOnNextTouch)
+        {
+            enabledMovementOnNextTouch = false;
+            ResetRestrictions();
+
+            GetComponent<Grappling>().StopGrapple();
+        }
     }
 
 

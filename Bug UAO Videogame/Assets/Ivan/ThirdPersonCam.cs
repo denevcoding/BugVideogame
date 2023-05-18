@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ThirdPersonCam : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class ThirdPersonCam : MonoBehaviour
     public Transform player;
     public Transform playerObj;
     public Rigidbody rb;
-
 
     public float rotationSpeed;
 
@@ -29,7 +29,7 @@ public class ThirdPersonCam : MonoBehaviour
         Topdown
     }
 
-
+    
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -83,6 +83,11 @@ public class ThirdPersonCam : MonoBehaviour
         if (newStyle == CameraStyle.Topdown) topDownCam.SetActive(true);
 
         currentStyle = newStyle;
+    }
+
+    public void DoFov(float endValue)
+    {
+        GetComponent<Camera>().DOFieldOfView(endValue, 0.25f);
     }
 
    

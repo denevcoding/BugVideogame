@@ -4958,6 +4958,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
+  cam: {fileID: 816420496}
+  grappleFov: 95
   orientation: {fileID: 1450149605}
   freeze: 0
   activeGrapple: 0
