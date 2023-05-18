@@ -31,6 +31,10 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    public bool freeze;
+
+    public bool activeGrapple;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -48,10 +52,16 @@ public class PlayerMovement : MonoBehaviour
         SpeedControl();
 
         // handle drag
-        if (grounded)
+        if (grounded && !activeGrapple)
           rb.drag = groundDrag;
         else
           rb.drag = 0;
+
+        
+        if (freeze)
+        {
+            rb.velocity = Vector3.zero;
+        }
 
 
     }
@@ -79,6 +89,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
+
+        
+
         // calcular direccion de movimiento
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
@@ -90,10 +103,15 @@ public class PlayerMovement : MonoBehaviour
         else if(!grounded)
           rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);  
 
+          if (activeGrapple) return;
+
     }
 
     private void SpeedControl()
     {
+        
+
+
       Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
       //limit velocity if needed
@@ -102,6 +120,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 limitedVel = flatVel.normalized * moveSpeed;
         rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
       }  
+
+      if (activeGrapple) return;
 
     }
 
@@ -119,4 +139,35 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
     }
 
+    public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
+    {
+        activeGrapple = true;
+
+        velocityToSet = CalculateJumpVelocity(transform.position, targetPosition, trajectoryHeight);
+        Invoke(nameof(SetVelocity), 0.1f);
+    }
+
+    private Vector3 velocityToSet;
+    private void SetVelocity()
+    {
+        rb.velocity = velocityToSet;
+    }
+
+
+    public Vector3 CalculateJumpVelocity(Vector3 startPoint, Vector3 endPoint, float trajectoryHeight)
+    {
+        float gravity = Physics.gravity.y;
+        float displacementY = endPoint.y - startPoint.y;
+        Vector3 displacementXZ = new Vector3(endPoint.x - startPoint.x, 0f, endPoint.z - startPoint.z);
+
+        Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2 * gravity * trajectoryHeight);
+        Vector3 velocityXZ = displacementXZ / (Mathf.Sqrt(-2 * trajectoryHeight / gravity)
+           + Mathf.Sqrt(2 * (displacementY - trajectoryHeight) / gravity));
+
+           return velocityXZ + velocityY;
+
+    }
+
+
+    
 }
