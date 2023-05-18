@@ -97,7 +97,7 @@ public class Grappling : MonoBehaviour
 
    }
 
-   private void StopGrapple()
+   public void StopGrapple()
    {
     pm.freeze = false;
 
