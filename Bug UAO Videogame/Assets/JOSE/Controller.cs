@@ -7,13 +7,16 @@ public class Controller : MonoBehaviour
     private CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
-    private float playerSpeed = 2.0f;
+    private float playerSpeed = 10.0f;
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
+    //public GameObject petObject;
+    //public List<Vector3> positionList;
+    //public int distance = 20;
 
     void Start()
     {
-        controller = gameObject.AddComponent<CharacterController>();
+        controller = gameObject.GetComponent<CharacterController>();
     }
 
     void Update()
@@ -40,5 +43,15 @@ public class Controller : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+
+        //positionList.Add(transform.position);
+
+        //if (positionList.Count > distance)
+        //{
+        //    positionList.RemoveAt(0);
+        //    petObject.transform.position = positionList[0];
+        //}
     }
+
+
 }
