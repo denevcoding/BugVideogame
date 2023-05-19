@@ -6,12 +6,25 @@ using TMPro;
 
 public class ScoringSystem : MonoBehaviour
 {
-
+    public TextMeshProUGUI textScore;
     public GameObject scoreText;
-    public static int score;
+    public  int score;
+
+    private void Start()
+    {
+        
+    }
 
     void Update()
     {
+   
         scoreText.GetComponent<Text>().text = "SDs: " + score;
+    }
+
+    public  void AddScore()
+    {
+        score += 1;
+        textScore.text = "SDs: " + score;
+
     }
 }

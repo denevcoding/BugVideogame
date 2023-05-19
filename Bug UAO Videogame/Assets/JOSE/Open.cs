@@ -9,13 +9,23 @@ public class Open : MonoBehaviour
     public int objective = 3;
 
     public Animation doorany;
+
+    private ScoringSystem scoreSystem;
+
+
+    private void Start()
+    {
+        scoreSystem = FindObjectOfType<ScoringSystem>();
+
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Equals("Player"))
             {
             if (!doorOpen)
             {
-                if(ScoringSystem.score >= objective)
+                if(scoreSystem.score >= objective)
                 {
                     doorany.Play();
                     doorOpen = true;

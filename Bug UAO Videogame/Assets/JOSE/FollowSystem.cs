@@ -13,10 +13,20 @@ public class FollowSystem : MonoBehaviour
     public int distance = 40;
     public int distance2 = 60;
     public int distance3 = 80;
+
+
+    ScoringSystem scoreSystem;
+
+
+    private void Start()
+    {
+        scoreSystem = FindObjectOfType<ScoringSystem>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (ScoringSystem.score >= 1)
+        if (scoreSystem.score >= 1)
         {
             positionList.Add(transform.position);
 
@@ -27,7 +37,7 @@ public class FollowSystem : MonoBehaviour
             }
         }
 
-        if (ScoringSystem.score >= 2)
+        if (scoreSystem.score >= 2)
         {
             positionList2.Add(transform.position);
 
@@ -38,7 +48,7 @@ public class FollowSystem : MonoBehaviour
             }
         }
 
-        if (ScoringSystem.score >= 3)
+        if (scoreSystem.score >= 3)
         {
             positionList3.Add(transform.position);
 

@@ -5,8 +5,15 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+    [SerializeField]
+    private ScoringSystem scoreSystem;
+    // public AudioSource collectSound;
 
-   // public AudioSource collectSound;
+
+    private void Start()
+    {
+        scoreSystem = FindObjectOfType<ScoringSystem>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -16,8 +23,10 @@ public class Collectible : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger " + gameObject.name);
-     //   collectSound.Play();
-        ScoringSystem.score += 1;       
+        //   collectSound.Play();
+
+        
+        scoreSystem.AddScore();
         Destroy(gameObject);
 
 
