@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &15472904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 222048423}
   - component: {fileID: 222048424}
   - component: {fileID: 222048425}
+  - component: {fileID: 222048426}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -280,7 +281,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 6795bee99087047dc980521acd7d9013, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -371,6 +372,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 2.0000002, z: 1.0000001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &222048426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222048416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81e11572f1a8407eaa870a3adcd54d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &242646096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -729,27 +742,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1001 &624019750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1015,6 +1007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ce21161166cf4546bc936b71c631f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreSystem: {fileID: 0}
 --- !u!1 &842709329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d4cdac3a548aa48a5381a0577cabf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objective: 2
+  objective: 3
   doorany: {fileID: 1945156058}
 --- !u!65 &842709332
 BoxCollider:
@@ -1167,7 +1160,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3eccf967f784333b9f8b62d51eb932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textScore: {fileID: 1192316999}
   scoreText: {fileID: 15472903}
+  score: 0
 --- !u!4 &1031786297
 Transform:
   m_ObjectHideFlags: 0
@@ -1214,6 +1209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ce21161166cf4546bc936b71c631f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreSystem: {fileID: 0}
 --- !u!54 &1078100735
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1379,7 +1375,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 6795bee99087047dc980521acd7d9013, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1441,7 +1437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1192316998
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1666,14 +1662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1415997061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,6 +1920,7 @@ GameObject:
   - component: {fileID: 1662858648}
   - component: {fileID: 1662858647}
   - component: {fileID: 1662858652}
+  - component: {fileID: 1662858653}
   m_Layer: 7
   m_Name: Cube
   m_TagString: Player
@@ -1972,7 +1961,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 31a8f7fcb7077425db4c344df89857df, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2010,8 +1999,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662858646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.72, y: 1.92, z: -11.43}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -9.72, y: 1.92, z: -9.43}
+  m_LocalScale: {x: 1, y: 1, z: 17.13}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2033,6 +2022,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1662858653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662858646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42036db189f74193bbc778acd68dc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1730543837 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7818f1c3f469342cd887805eab5992ad, type: 3}
@@ -2128,6 +2129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ce21161166cf4546bc936b71c631f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreSystem: {fileID: 0}
 --- !u!54 &1795246279
 Rigidbody:
   m_ObjectHideFlags: 0
