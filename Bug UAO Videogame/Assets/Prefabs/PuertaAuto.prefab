@@ -187,6 +187,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4519549dcc746db4180661b0fe925f92, type: 3}
+--- !u!1 &6334812527325781181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4519549dcc746db4180661b0fe925f92, type: 3}
+  m_PrefabInstance: {fileID: 6568693294849565164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7982554655641725935
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334812527325781181}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.011472734, y: 0.01500731, z: 0.001488274}
+  m_Center: {x: -0.004762125, y: -0.0024963438, z: -0.000000007450581}
 --- !u!4 &6674922623203460615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4519549dcc746db4180661b0fe925f92, type: 3}
@@ -323,6 +341,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fca2b76fe4b39f47bba919ae532cb63, type: 3}
+--- !u!1 &6334812526933586074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fca2b76fe4b39f47bba919ae532cb63, type: 3}
+  m_PrefabInstance: {fileID: 6568693295531101643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7599541951612552010
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334812526933586074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010549818, y: 0.01500731, z: 0.0013959075}
+  m_Center: {x: 0.0051955343, y: -0.0024963438, z: -0.000000007450581}
 --- !u!4 &6674922622479919648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5fca2b76fe4b39f47bba919ae532cb63, type: 3}
