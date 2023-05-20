@@ -147,21 +147,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e1ed5e9d2d4e43dfa24d08e7d737627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  walkSpeed: 7
+  sprintSpeed: 10
+  swingSpeed: 0
   groundDrag: 5
   jumpForce: 12
   jumpCooldown: 0.25
   airMultiplier: 0.4
   jumpKey: 32
+  sprintKey: 304
   playerHeight: 3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
+  maxSlopeAngle: 50
   cam: {fileID: 0}
   grappleFov: 95
   orientation: {fileID: 5705225555706551315}
+  state: 0
   freeze: 0
   activeGrapple: 0
+  swinging: 0
 --- !u!114 &2792385180236046945
 MonoBehaviour:
   m_ObjectHideFlags: 0
