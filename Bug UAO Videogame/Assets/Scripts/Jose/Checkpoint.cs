@@ -36,8 +36,8 @@ public class Checkpoint : MonoBehaviour
 
     public void RespawnOnCheckPoint()
     {
-        player.GetComponent<CharacterController>().enabled = false;
+        //player.GetComponent<CharacterController>().enabled = false;
         player.transform.position = vectorPoint;
-        player.GetComponent<CharacterController>().enabled = true;
+        //player.GetComponent<CharacterController>().enabled = true;
     }
 }

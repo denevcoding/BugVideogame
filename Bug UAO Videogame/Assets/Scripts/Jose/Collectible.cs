@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    [SerializeField]
     private ScoringSystem scoreSystem;
     // public AudioSource collectSound;
 

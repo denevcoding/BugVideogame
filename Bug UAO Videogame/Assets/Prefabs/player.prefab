@@ -89,6 +89,9 @@ GameObject:
   - component: {fileID: 5705225555359078089}
   - component: {fileID: 5705225555359078070}
   - component: {fileID: 5705225555359078071}
+  - component: {fileID: 2792385180236046945}
+  - component: {fileID: 554933870862651715}
+  - component: {fileID: 9150243350327353067}
   - component: {fileID: 5705225555359078068}
   - component: {fileID: 5705225555359078069}
   - component: {fileID: 5705225555359078066}
@@ -159,6 +162,55 @@ MonoBehaviour:
   orientation: {fileID: 5705225555706551315}
   freeze: 0
   activeGrapple: 0
+--- !u!114 &2792385180236046945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705225555359078088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064088f336ea91645aa8a05260a9fb92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petObject: {fileID: 0}
+  petObject2: {fileID: 0}
+  petObject3: {fileID: 0}
+  positionList: []
+  positionList2: []
+  positionList3: []
+  distance: 40
+  distance2: 60
+  distance3: 80
+--- !u!114 &554933870862651715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705225555359078088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81e11572f1a8407eaa870a3adcd54d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9150243350327353067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705225555359078088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1ae819403e4461f84d3fdb2a8e8b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  lastCheckPoint: {fileID: 0}
+  vectorPoint: {x: 0, y: 0, z: 0}
+  dead: 0
 --- !u!114 &5705225555359078068
 MonoBehaviour:
   m_ObjectHideFlags: 0

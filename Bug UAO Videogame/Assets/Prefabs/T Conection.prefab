@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 616567256245528560}
   - component: {fileID: 4549100933533526101}
   - component: {fileID: 1784921318894410911}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: T Conection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271812518892453194}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: 41.5, y: 2, z: 209.2204}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
@@ -38,7 +38,7 @@ Transform:
   - {fileID: 1082207350582769027}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &4549100933533526101
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -100,8 +100,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1082207350582769027}
   - component: {fileID: 1082207350582769026}
-  m_Layer: 0
-  m_Name: GameObject
+  m_Layer: 10
+  m_Name: Ceiling Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082207350582769036}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: cd55fb8a423cd43a2964805d77393291, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -149,8 +149,8 @@ GameObject:
   - component: {fileID: 1082207350822679687}
   - component: {fileID: 1082207350822679680}
   - component: {fileID: 1082207350822679681}
-  m_Layer: 0
-  m_Name: PolyShape
+  m_Layer: 10
+  m_Name: Wall right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,7 +542,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082207350822679682}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: cd55fb8a423cd43a2964805d77393291, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -563,8 +563,8 @@ GameObject:
   - component: {fileID: 1082207351175764454}
   - component: {fileID: 1082207351175764455}
   - component: {fileID: 1082207351175764448}
-  m_Layer: 0
-  m_Name: PolyShape
+  m_Layer: 10
+  m_Name: Wall left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -956,7 +956,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082207351175764450}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: cd55fb8a423cd43a2964805d77393291, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -977,8 +977,8 @@ GameObject:
   - component: {fileID: 1082207351214668760}
   - component: {fileID: 1082207351214668761}
   - component: {fileID: 1082207351214668762}
-  m_Layer: 0
-  m_Name: piso t
+  m_Layer: 10
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1484,7 +1484,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082207351214668763}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: cd55fb8a423cd43a2964805d77393291, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -1505,8 +1505,8 @@ GameObject:
   - component: {fileID: 1082207351282257295}
   - component: {fileID: 1082207351282257288}
   - component: {fileID: 1082207351282257289}
-  m_Layer: 0
-  m_Name: PolyShape
+  m_Layer: 10
+  m_Name: Wall center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1860,7 +1860,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082207351282257290}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: cd55fb8a423cd43a2964805d77393291, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -1881,8 +1881,8 @@ GameObject:
   - component: {fileID: 1082207352019500938}
   - component: {fileID: 1082207352019500939}
   - component: {fileID: 1082207352019500948}
-  m_Layer: 0
-  m_Name: techo
+  m_Layer: 10
+  m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2464,7 +2464,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082207352019500949}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: cd55fb8a423cd43a2964805d77393291, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
