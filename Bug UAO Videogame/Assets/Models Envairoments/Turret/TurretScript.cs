@@ -10,6 +10,7 @@ public class TurretScript : MonoBehaviour
     public Transform head, barrel;
     public GameObject _projectile;
     public float fireRate, nextFire;
+    public float force = 1500;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +36,7 @@ public class TurretScript : MonoBehaviour
     void shoot()
     {
         GameObject clone = Instantiate(_projectile, barrel.position, head.rotation);
-        clone.GetComponent<Rigidbody>().AddForce(head.forward * 1500);
+        clone.GetComponent<Rigidbody>().AddForce(head.forward * force);
         Destroy(clone, 5);
     }
 }
