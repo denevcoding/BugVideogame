@@ -56,13 +56,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _DissolveAmount: 0
-    - _NoiseAmount: 0.42
-    - _NoisePower: -2.43
-    - _NoiseScale: 68.96
+    - _NoiseAmount: 0.255
+    - _NoisePower: 0.4
+    - _NoiseScale: 32.8
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 33.89676, g: 33.89676, b: 33.89676, a: 1}
-    - _MainSpeed: {r: -0.26, g: 0, b: 0, a: 0}
-    - _NoiseSpeed: {r: -0.34, g: 0, b: 0, a: 0}
+    - _Color: {r: 37.996986, g: 0, b: 0, a: 1}
+    - _MainSpeed: {r: -7.71, g: 0, b: 0, a: 0}
+    - _NoiseSpeed: {r: 3.68, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
