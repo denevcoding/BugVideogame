@@ -12,7 +12,7 @@ public class Checkpoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckHeightDead();
+        //CheckHeightDead();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +30,6 @@ public class Checkpoint : MonoBehaviour
         if (player.transform.position.y < -dead)
         {
             RespawnOnCheckPoint(); 
-
         }
     }
 

@@ -9,6 +9,7 @@ public class TriggerDoor : MonoBehaviour
     public string Dooropenparam = "DoorOpen";
     public Animator animator;
 
+
     private void Start()
     {
         scoreSystem = FindObjectOfType<ScoringSystem>();

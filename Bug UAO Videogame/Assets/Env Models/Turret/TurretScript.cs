@@ -11,6 +11,11 @@ public class TurretScript : MonoBehaviour
     public GameObject _projectile;
     public float fireRate, nextFire;
     public float force = 1500;
+
+    public Animator turretAnimator;
+
+    public float lastShootTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,13 +28,20 @@ public class TurretScript : MonoBehaviour
         dist = Vector3.Distance(_Player.position, transform.position);
         if(dist <= howClose)
         {
+            turretAnimator.SetBool("Waked", true);
             head.LookAt(_Player);
-            if(Time.time >= nextFire)
+            if(Time.time > lastShootTime + fireRate)
             {
-                nextFire = Time.time + 1f / fireRate;
-                shoot();
+                lastShootTime = Time.time;
+                turretAnimator.SetTrigger("Shoot");
+                Debug.Log("FIre rate");       
+                //turretAnimator.ResetTrigger("Shoot");
+             
             }
-            
+        }
+        else
+        {
+            turretAnimator.SetBool("Waked", false);
         }
 
     }

@@ -26,38 +26,38 @@ public class FollowSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (scoreSystem.score >= 1)
-        {
-            positionList.Add(transform.position);
+        //if (scoreSystem.score >= 1)
+        //{
+        //    positionList.Add(transform.position);
 
-            if (positionList.Count > distance)
-            {
-                positionList.RemoveAt(0);
-                petObject.transform.position = positionList[0];
-            }
-        }
+        //    if (positionList.Count > distance)
+        //    {
+        //        positionList.RemoveAt(0);
+        //        petObject.transform.position = positionList[0];
+        //    }
+        //}
 
-        if (scoreSystem.score >= 2)
-        {
-            positionList2.Add(transform.position);
+        //if (scoreSystem.score >= 2)
+        //{
+        //    positionList2.Add(transform.position);
 
-            if (positionList2.Count > distance2)
-            {
-                positionList2.RemoveAt(0);
-                petObject2.transform.position = positionList2[0];
-            }
-        }
+        //    if (positionList2.Count > distance2)
+        //    {
+        //        positionList2.RemoveAt(0);
+        //        petObject2.transform.position = positionList2[0];
+        //    }
+        //}
 
-        if (scoreSystem.score >= 3)
-        {
-            positionList3.Add(transform.position);
+        //if (scoreSystem.score >= 3)
+        //{
+        //    positionList3.Add(transform.position);
 
-            if (positionList3.Count > distance3)
-            {
-                positionList3.RemoveAt(0);
-                petObject3.transform.position = positionList3[0];
-            }
-        }
+        //    if (positionList3.Count > distance3)
+        //    {
+        //        positionList3.RemoveAt(0);
+        //        petObject3.transform.position = positionList3[0];
+        //    }
+        //}
 
     }
 
