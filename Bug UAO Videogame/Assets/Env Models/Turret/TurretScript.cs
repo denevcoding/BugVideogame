@@ -34,9 +34,6 @@ public class TurretScript : MonoBehaviour
             {
                 lastShootTime = Time.time;
                 turretAnimator.SetTrigger("Shoot");
-                Debug.Log("FIre rate");       
-                //turretAnimator.ResetTrigger("Shoot");
-             
             }
         }
         else
