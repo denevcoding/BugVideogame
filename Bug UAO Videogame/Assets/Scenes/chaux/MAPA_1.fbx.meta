@@ -3,7 +3,42 @@ guid: e0743ae83a313b74abf530bec7380b8a
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LUZ
+    second: {fileID: 2100000, guid: dd513c47eb7e831468b468eb1c5198aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lit.001
+    second: {fileID: 2100000, guid: 4b1fb21050485184e9fc2414566ab2db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PANEL2
+    second: {fileID: 2100000, guid: 7bf05d44f91d19f448264f62e8b9205c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PANELES
+    second: {fileID: 2100000, guid: f49757a863417784098695cd0c1d41eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tunel_Mat
+    second: {fileID: 2100000, guid: 0d0bb06e36db71b42b8f209c8210d919, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: e7d7c8cccef47104485f740d9f5f0ea5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pared
+    second: {fileID: 2100000, guid: 97462782edc594e4fadb6a9cbda645e5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
