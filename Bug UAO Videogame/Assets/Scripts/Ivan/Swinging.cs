@@ -11,17 +11,27 @@ public KeyCode swingKey = KeyCode.Mouse0;
 public LineRenderer lr;
 public Transform gunTip, cam, player;
 public LayerMask whatIsGrappleable;
+public PlayerMovement pm;
 
 [Header("Swinging")]
 private float maxSwingDistance = 25f;
 private Vector3 swingPoint;
 private SpringJoint joint;
 
+[Header("OdmGear")]
+public Transform orientation;
+public Rigidbody rb;
+public float horizontalThrustForce;
+public float forwardThrustForce;
+public float extendCableSpeed;
+
 
 void Update()
 {
     if (Input.GetKeyDown(swingKey)) StartSwing();
     if (Input.GetKeyUp(swingKey)) StopSwing();
+
+    if (joint != null) OdmGearMovement();
 }
 
 void LateUpdate()
@@ -33,6 +43,8 @@ void LateUpdate()
 
      void StartSwing()
     {
+        pm.swinging = true;
+
         RaycastHit hit;
         if (Physics.Raycast(cam.position, cam.forward, out hit, maxSwingDistance, whatIsGrappleable))
         {
@@ -60,6 +72,8 @@ void LateUpdate()
 
     void StopSwing()
     {
+        pm.swinging = false;
+
         lr.positionCount = 0;
         Destroy(joint);
 
@@ -76,6 +90,40 @@ void LateUpdate()
         lr.SetPosition(0, gunTip.position);
         lr.SetPosition(1, currentGrappleposition);
 
+    }
+
+    private void OdmGearMovement()
+    {
+        // right
+        if (Input.GetKey(KeyCode.D)) rb.AddForce(orientation.right * horizontalThrustForce * Time.deltaTime);
+        // left
+        if (Input.GetKey(KeyCode.A)) rb.AddForce(-orientation.right * horizontalThrustForce * Time.deltaTime);
+        
+        // forward
+        if (Input.GetKey(KeyCode.W)) rb.AddForce(orientation.forward * forwardThrustForce * Time.deltaTime);
+
+         // forward
+        if (Input.GetKey(KeyCode.S)) rb.AddForce(-orientation.forward * forwardThrustForce * Time.deltaTime);
+
+        // shorten cable 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Vector3 directionToPoint = swingPoint - transform.position;
+            rb.AddForce(directionToPoint.normalized * forwardThrustForce * Time.deltaTime);
+
+            float distanceFromPoint = Vector3.Distance(transform.position, swingPoint);
+
+            joint.maxDistance = distanceFromPoint * 0.8f;
+            joint.minDistance = distanceFromPoint * 0.25f;
+        }
+        // extend cable 
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            float extendedDistanceFromPoint = Vector3.Distance(transform.position, swingPoint) + extendCableSpeed;
+
+            joint.maxDistance = extendedDistanceFromPoint * 0.8f;
+            joint.minDistance = extendedDistanceFromPoint * 0.25f;
+        }
     }
 
 }

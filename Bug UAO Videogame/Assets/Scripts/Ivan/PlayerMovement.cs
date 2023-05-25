@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Slope Handling")]
     public float maxSlopeAngle ;
     private RaycastHit slopeHit;
+    private bool exitingSlope;
 
     [Header("Camera Effects")]
     public ThirdPersonCam cam;
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
     {
         walking,
         sprinting,
+        swinging,
         air
     }
 
@@ -129,6 +131,13 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = walkSpeed;
         }
 
+        // mode - swinging
+        else if (swinging)
+        {
+            state = MovementState.swinging;
+            moveSpeed = swingSpeed;
+        }
+
         // Mode - Air
         else
         {
@@ -138,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
+        if (swinging) return;
 
 
 
@@ -145,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         // on Slope
-        if (OnSlope())
+        if (OnSlope() && !exitingSlope)
         {
             rb.AddForce(GetSlopeMoveDirection() * moveSpeed * 10f, ForceMode.Force);
 
@@ -173,10 +183,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void SpeedControl()
     {
-        
+        // limiting speed on slope
+        if (OnSlope() && !exitingSlope)
+        {
+            if (rb.velocity.magnitude > moveSpeed)
+           rb.velocity = rb.velocity.normalized * moveSpeed;
+        }
 
-
-      Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        // limiting speed on ground or in air 
+        else
+        {
+             Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
       //limit velocity if needed
       if(flatVel.magnitude > moveSpeed)
@@ -185,6 +202,12 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
       }  
 
+        }
+
+
+     
+    
+
       if (activeGrapple) return;
 
     }
@@ -192,6 +215,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        exitingSlope = true;
         // reset y velocity
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
@@ -201,6 +225,8 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+
+        exitingSlope = false;
     }
 
     private bool OnSlope()

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5903,6 +5903,17 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!114 &1785475476 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5705225555359078071, guid: 8851750c250a94265a0f5a4f493470ba, type: 3}
+  m_PrefabInstance: {fileID: 5705225554394946294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1ed5e9d2d4e43dfa24d08e7d737627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1802502552
 GameObject:
   m_ObjectHideFlags: 0
@@ -7312,15 +7323,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409076673314, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5012347
+      value: -0.50123465
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409076673314, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -2.2548671e-15
+      value: -0.000000025788289
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409076673314, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 4.3866943e-18
+      value: -0.000000014937957
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409207855077, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7412,15 +7423,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409424392426, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5012348
+      value: -0.5012347
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409424392426, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000000304389
+      value: 0.0000000030438931
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409424392426, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000017631855
+      value: 0.000000001763187
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409424392439, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: rb
@@ -7512,11 +7523,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4213268410077487658, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000004115453
+      value: -0.000000011027322
       objectReference: {fileID: 0}
     - target: {fileID: 4213268410077487658, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000022718346
+      value: -0.0000000060873653
       objectReference: {fileID: 0}
     - target: {fileID: 4213268410147301678, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_XDamping
@@ -7552,6 +7563,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 659634961}
     - target: {fileID: 5705225555359078069, guid: 8851750c250a94265a0f5a4f493470ba, type: 3}
+      propertyPath: pm
+      value: 
+      objectReference: {fileID: 1785475476}
+    - target: {fileID: 5705225555359078069, guid: 8851750c250a94265a0f5a4f493470ba, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 999918656}
+    - target: {fileID: 5705225555359078069, guid: 8851750c250a94265a0f5a4f493470ba, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 816420493}
@@ -7559,6 +7578,22 @@ PrefabInstance:
       propertyPath: gunTip
       value: 
       objectReference: {fileID: 659634961}
+    - target: {fileID: 5705225555359078069, guid: 8851750c250a94265a0f5a4f493470ba, type: 3}
+      propertyPath: orientation
+      value: 
+      objectReference: {fileID: 1450149605}
+    - target: {fileID: 5705225555359078069, guid: 8851750c250a94265a0f5a4f493470ba, type: 3}
+      propertyPath: extendCableSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705225555359078069, guid: 8851750c250a94265a0f5a4f493470ba, type: 3}
+      propertyPath: forwardThrustForce
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705225555359078069, guid: 8851750c250a94265a0f5a4f493470ba, type: 3}
+      propertyPath: horizontalThrustForce
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 5705225555359078071, guid: 8851750c250a94265a0f5a4f493470ba, type: 3}
       propertyPath: cam
       value: 
