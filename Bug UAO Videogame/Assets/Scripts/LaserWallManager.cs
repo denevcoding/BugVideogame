@@ -16,13 +16,13 @@ public class LaserWallManager : MonoBehaviour
 
         for (int i = 0; i < transform.childCount; i++)
         {
-            //LeanTween.moveLocalY(transform.GetChild(i).gameObject, heightValue, time).setEaseInOutCubic().setLoopPingPong();
+            LeanTween.moveLocalY(transform.GetChild(i).gameObject, heightValue, time).setEaseInOutCubic().setLoopPingPong();
             lasers.Add(transform.GetChild(i).gameObject);  
         }
 
-        LeanTween.moveLocalY(lasers[0].gameObject, heightValue, time).setEaseInOutCubic().setLoopPingPong();
-        LeanTween.moveLocalY(lasers[1].gameObject, 1f, time).setEaseInOutCubic().setLoopPingPong();
-        LeanTween.moveLocalY(lasers[2].gameObject, 3f, time).setEaseInOutCubic().setLoopPingPong();
+        //LeanTween.moveLocalY(lasers[0].gameObject, 3f, time).setEaseInOutCubic().setLoopPingPong();
+        //LeanTween.moveLocalY(lasers[1].gameObject, 1.5f, time).setEaseInOutCubic().setLoopPingPong();
+        //LeanTween.moveLocalY(lasers[2].gameObject, 0f, time).setEaseInOutCubic().setLoopPingPong();
 
     
     }

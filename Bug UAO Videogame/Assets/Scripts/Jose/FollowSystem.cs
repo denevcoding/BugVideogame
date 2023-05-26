@@ -14,6 +14,8 @@ public class FollowSystem : MonoBehaviour
     public int distance2 = 60;
     public int distance3 = 80;
 
+    public int collectibleAmount;
+
 
     ScoringSystem scoreSystem;
 
