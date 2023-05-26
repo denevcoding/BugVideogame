@@ -25,11 +25,19 @@ public float horizontalThrustForce;
 public float forwardThrustForce;
 public float extendCableSpeed;
 
+[Header("Prediction")]
+public RaycastHit predictionHit;
+public float predictionSphereCastRadius;
+public Transform predictionPoint;
+
+
 
 void Update()
 {
     if (Input.GetKeyDown(swingKey)) StartSwing();
     if (Input.GetKeyUp(swingKey)) StopSwing();
+
+    CheckForSwingPoints();
 
     if (joint != null) OdmGearMovement();
 }
@@ -43,12 +51,19 @@ void LateUpdate()
 
      void StartSwing()
     {
+        // return if predictionHit not found 
+        if (predictionHit.point == Vector3.zero) return;
+
+        //deactive active grapple
+        if(GetComponent<Grappling>() != null)
+        GetComponent<Grappling>().StopGrapple();
+        pm.ResetRestrictions();
+
+
         pm.swinging = true;
 
-        RaycastHit hit;
-        if (Physics.Raycast(cam.position, cam.forward, out hit, maxSwingDistance, whatIsGrappleable))
-        {
-            swingPoint = hit.point;
+        
+            swingPoint = predictionHit.point;
             joint = player.gameObject.AddComponent<SpringJoint>();
             joint.autoConfigureConnectedAnchor = false;
             joint.connectedAnchor = swingPoint;
@@ -66,11 +81,11 @@ void LateUpdate()
 
             lr.positionCount = 2;
             currentGrappleposition = gunTip.position;
-        }
+        
 
     }
 
-    void StopSwing()
+    public void StopSwing()
     {
         pm.swinging = false;
 
@@ -124,6 +139,45 @@ void LateUpdate()
             joint.maxDistance = extendedDistanceFromPoint * 0.8f;
             joint.minDistance = extendedDistanceFromPoint * 0.25f;
         }
+    }
+    private void CheckForSwingPoints()
+    {
+        if (joint != null) return;
+
+        RaycastHit sphereCastHit;
+        Physics.SphereCast(cam.position, predictionSphereCastRadius, cam.forward, out sphereCastHit, maxSwingDistance, whatIsGrappleable);
+
+        RaycastHit raycastHit;
+        Physics.Raycast(cam.position, cam.forward, out raycastHit, maxSwingDistance, whatIsGrappleable);
+
+
+        Vector3 realHitPoint;
+
+        // option1 - Direct hit
+        if (raycastHit.point != Vector3.zero)
+            realHitPoint = raycastHit.point;
+
+      // option2 - indirect predicted hit
+        else if (sphereCastHit.point != Vector3.zero)
+        realHitPoint = sphereCastHit.point;
+
+        // option 3 - miss
+        else
+             realHitPoint = Vector3.zero; 
+
+        // realhitpoint found
+        if (realHitPoint != Vector3.zero)
+        {
+            predictionPoint.gameObject.SetActive(true);
+            predictionPoint.position = realHitPoint;
+        }   
+
+        // realhitpoint not found
+        else{
+            predictionPoint.gameObject.SetActive(false);
+        }
+        predictionHit = raycastHit.point == Vector3.zero ? sphereCastHit : raycastHit;
+
     }
 
 }
