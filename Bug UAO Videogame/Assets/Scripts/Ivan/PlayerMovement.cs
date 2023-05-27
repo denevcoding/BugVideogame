@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Animator animator;
+    public GameObject objectToFind;
+    string tagName = "SomeTag";
+
     [Header("Movement")]
     private float moveSpeed;
     public float walkSpeed;
@@ -68,6 +72,9 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
 
         readyToJump = true;
+
+        objectToFind = GameObject.FindGameObjectWithTag(tagName);
+        animator = objectToFind.GetComponent<Animator>();
     }
 
     private void Update()
@@ -92,6 +99,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+
+
     }
 
     private void FixedUpdate()
@@ -112,6 +121,10 @@ public class PlayerMovement : MonoBehaviour
             Jump();
 
             Invoke(nameof(ResetJump), jumpCooldown);
+
+            animator.SetTrigger("JUMP");
+
+
         }
     }
 
@@ -298,6 +311,11 @@ public class PlayerMovement : MonoBehaviour
            return velocityXZ + velocityY;
 
     }
+
+
+
+
+
 
 
     
