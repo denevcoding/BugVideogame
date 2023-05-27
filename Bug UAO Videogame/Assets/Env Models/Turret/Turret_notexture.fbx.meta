@@ -65,7 +65,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: PlayCose
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 00a314325f8a548b0b084f5fc1cabdd2, type: 3}
+        floatParameter: 1
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -75,14 +82,14 @@ ModelImporter:
       takeName: Fire
       internalID: 0
       firstFrame: 0
-      lastFrame: 43
+      lastFrame: 113
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -95,7 +102,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.8817312
+      - time: 0
+        functionName: PlayShoot
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 00a314325f8a548b0b084f5fc1cabdd2, type: 3}
+        floatParameter: 1
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.34077883
         functionName: shoot
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: f341717581f0d4ce3801147f2988afa0, type: 3}
@@ -118,7 +132,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -130,7 +144,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.0072376356
+        functionName: PlayCose
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 00a314325f8a548b0b084f5fc1cabdd2, type: 3}
+        floatParameter: 1
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
