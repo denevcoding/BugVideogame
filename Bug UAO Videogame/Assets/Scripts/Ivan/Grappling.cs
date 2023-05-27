@@ -29,19 +29,33 @@ public class Grappling : MonoBehaviour
 
    private bool grappling;
 
-   
-   private void Start()
+    private Animator animator;
+    public GameObject objectToFind;
+    string tagName = "SomeTag";
+
+
+    private void Start()
    {
       pm = GetComponent<PlayerMovement>();
-   }
+        objectToFind = GameObject.FindGameObjectWithTag(tagName);
+        animator = objectToFind.GetComponent<Animator>();
+    }
 
 
 
    private void Update()
    {
-     if(Input.GetKeyDown(grappleKey)) StartGrapple();
+        if (Input.GetKeyDown(grappleKey))
 
-     if(grapplingCdTimer > 0)
+        {
+
+            StartGrapple();
+           
+         
+        }
+
+
+        if (grapplingCdTimer > 0)
         grapplingCdTimer -= Time.deltaTime;
    }
 
@@ -62,8 +76,12 @@ public class Grappling : MonoBehaviour
     GetComponent<Swinging>().StopSwing();
     
     grappling = true;
+    animator.SetBool("Grappling", true);
+
 
     pm.freeze = true;
+
+
 
     RaycastHit hit;
     if(Physics.Raycast(cam.position, cam.forward, out hit, maxGrappleDistance, whatIsGrappleable))
@@ -105,6 +123,7 @@ public class Grappling : MonoBehaviour
     pm.freeze = false;
 
     grappling = false;
+    animator.SetBool("Grappling", false);
 
     grapplingCdTimer = grapplingCd;
 

@@ -40,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
     public ThirdPersonCam cam;
     public float grappleFov = 95f;
 
+    [SerializeField] private float MovementZ, MovementX, MovementY;
+
 
 
     public Transform orientation;
@@ -98,7 +100,23 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector3.zero;
         }
 
+        MovementZ = verticalInput;
+        MovementX = horizontalInput;
+        MovementY = rb.velocity.y;
 
+
+        if (grounded)
+        {
+            animator.SetFloat("YSpeed", Input.GetAxis("Vertical"));
+            animator.SetFloat("XSpeed", Input.GetAxis("Horizontal"));
+        }
+        else
+        {
+            animator.SetFloat("YSpeed", 0f);
+            animator.SetFloat("XSpeed", 0f);
+        }
+
+        
 
 
     }
@@ -123,6 +141,12 @@ public class PlayerMovement : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
 
             animator.SetTrigger("JUMP");
+
+            if(verticalInput > 0)
+            {
+                animator.SetBool("IS_WALKING", true);
+            }
+        else { animator.SetBool("IS_WALKING", false); }
 
 
         }
