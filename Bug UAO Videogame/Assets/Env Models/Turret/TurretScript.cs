@@ -44,6 +44,8 @@ public class TurretScript : MonoBehaviour
     }
     void shoot()
     {
+        if (turretAnimator.GetBool("Waked") == false)
+            return;
         GameObject clone = Instantiate(_projectile, barrel.position, head.rotation);
         clone.GetComponent<Rigidbody>().AddForce(head.forward * force);
         Destroy(clone, 5);

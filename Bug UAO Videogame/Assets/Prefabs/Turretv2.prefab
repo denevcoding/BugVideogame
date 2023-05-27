@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5086888287793851024}
   m_LocalRotation: {x: -0.5052087, y: 0.4848307, z: 0.49225286, w: 0.51709825}
-  m_LocalPosition: {x: 0.11103058, y: 3.8322327, z: 0.67251956}
+  m_LocalPosition: {x: 0.11103089, y: 3.8322327, z: 0.67252463}
   m_LocalScale: {x: 2.65, y: 2.6499996, z: 2.6499999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -167,7 +167,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5357357366617489251}
-  m_LocalRotation: {x: 0.000000081460335, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.336, y: -1.72, z: -7.913}
   m_LocalScale: {x: 0.2, y: 0.2857143, z: 0.2}
   m_ConstrainProportionsScale: 1
@@ -299,6 +299,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 54260261bad5f4814b69bf448e667f7d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a693a725f31144cfe8c936e4d6ba3db6, type: 3}
+--- !u!95 &1725675098287118981 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: a693a725f31144cfe8c936e4d6ba3db6, type: 3}
+  m_PrefabInstance: {fileID: 5086888287371831060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4689083456625950975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a693a725f31144cfe8c936e4d6ba3db6, type: 3}
@@ -321,13 +326,127 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f341717581f0d4ce3801147f2988afa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  howClose: 7
+  howClose: 15
   head: {fileID: 4689083456625950975}
   barrel: {fileID: 5086888288524335797}
   _projectile: {fileID: 2443920030917668325, guid: 32e1341272fd64784b8ab932d633638c, type: 3}
-  fireRate: 2
+  fireRate: 3
   nextFire: 5
   force: 1500
+  turretAnimator: {fileID: 1725675098287118981}
+  lastShootTime: 0
+--- !u!82 &1886577243
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357357365759416901}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 5.43
+  MaxDistance: 25.28
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1886577245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357357365759416901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a314325f8a548b0b084f5fc1cabdd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 1886577243}
+  TurretInitSFX: {fileID: 8300000, guid: cfaf9bd9a32cf497b8b6bea2c62ce5f4, type: 3}
+  TurretShootSFX: {fileID: 8300000, guid: 62f06d07c311e4482a92fd81f73e99f7, type: 3}
+  TurretCloseSFX: {fileID: 8300000, guid: ebdd6839d674e494e85a2187c5e62ce3, type: 3}
 --- !u!4 &6426709777064267298 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6942294909175551690, guid: a693a725f31144cfe8c936e4d6ba3db6, type: 3}
