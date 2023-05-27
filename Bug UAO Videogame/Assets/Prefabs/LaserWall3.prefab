@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1866830077634428487}
   - component: {fileID: 2811356497016034711}
   - component: {fileID: 7391316160727988336}
+  - component: {fileID: 300093717}
   m_Layer: 0
   m_Name: LaserWall3 (2)
   m_TagString: Untagged
@@ -97,6 +98,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &300093717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387975747856371469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42036db189f74193bbc778acd68dc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3068803147885112668
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3068803147885112667}
   - component: {fileID: 156434027}
+  - component: {fileID: 156434030}
   m_Layer: 0
   m_Name: LaserWall3
   m_TagString: Untagged
@@ -147,6 +161,18 @@ MonoBehaviour:
   lasers: []
   heightValue: 6.07
   time: 2
+--- !u!114 &156434030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068803147885112668}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42036db189f74193bbc778acd68dc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3068803147978007149
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,6 +186,7 @@ GameObject:
   - component: {fileID: 3068803147978007146}
   - component: {fileID: 3068803147978007147}
   - component: {fileID: 1071795960}
+  - component: {fileID: 1071795961}
   m_Layer: 0
   m_Name: LaserWall3
   m_TagString: Untagged
@@ -341,6 +368,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1071795961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068803147978007149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42036db189f74193bbc778acd68dc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3068803149092264811
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +392,7 @@ GameObject:
   - component: {fileID: 3068803149092264791}
   - component: {fileID: 3068803149092264808}
   - component: {fileID: 3068803149092264809}
+  - component: {fileID: 1128164317}
   m_Layer: 0
   m_Name: LaserWall3 (1)
   m_TagString: Untagged
@@ -438,3 +478,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1128164317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068803149092264811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42036db189f74193bbc778acd68dc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

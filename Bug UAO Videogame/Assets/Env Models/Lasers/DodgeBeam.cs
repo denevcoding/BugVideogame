@@ -55,6 +55,8 @@ public class DodgeBeam : MonoBehaviour
 
         if (hitted)
         {
+            PlayerHealth playerHealth = hit.collider.gameObject.GetComponentInParent<PlayerHealth>();
+            playerHealth.Kill();
             Debug.Log("Catched: " + hit.collider.gameObject.name);       
         }
     }

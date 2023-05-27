@@ -393,7 +393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &75458519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1452,15 +1452,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409207855077, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.12218327
+      value: -0.12218325
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409207855077, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000003186698
+      value: 0.0000000022879472
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409207855077, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000039230046
+      value: 2.8165925e-10
       objectReference: {fileID: 0}
     - target: {fileID: 4213268409289211969, guid: 3baa4b68bc5574c07a8b5cac5dfaa709, type: 3}
       propertyPath: m_Follow
@@ -6528,10 +6528,6 @@ PrefabInstance:
     - target: {fileID: 5357357366617489251, guid: cdaa5b17a28764932937368b696afa75, type: 3}
       propertyPath: m_Name
       value: Turretv2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5357357366617489251, guid: cdaa5b17a28764932937368b696afa75, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdaa5b17a28764932937368b696afa75, type: 3}

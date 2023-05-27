@@ -314,27 +314,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a693a725f31144cfe8c936e4d6ba3db6, type: 3}
   m_PrefabInstance: {fileID: 5086888287371831060}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5086888287179579684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5357357365759416901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f341717581f0d4ce3801147f2988afa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  howClose: 15
-  head: {fileID: 4689083456625950975}
-  barrel: {fileID: 5086888288524335797}
-  _projectile: {fileID: 2443920030917668325, guid: 32e1341272fd64784b8ab932d633638c, type: 3}
-  fireRate: 3
-  nextFire: 5
-  force: 1500
-  turretAnimator: {fileID: 1725675098287118981}
-  lastShootTime: 0
 --- !u!82 &1886577243
 AudioSource:
   m_ObjectHideFlags: 0
@@ -447,6 +426,27 @@ MonoBehaviour:
   TurretInitSFX: {fileID: 8300000, guid: cfaf9bd9a32cf497b8b6bea2c62ce5f4, type: 3}
   TurretShootSFX: {fileID: 8300000, guid: 62f06d07c311e4482a92fd81f73e99f7, type: 3}
   TurretCloseSFX: {fileID: 8300000, guid: ebdd6839d674e494e85a2187c5e62ce3, type: 3}
+--- !u!114 &5086888287179579684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357357365759416901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f341717581f0d4ce3801147f2988afa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  howClose: 15
+  head: {fileID: 4689083456625950975}
+  barrel: {fileID: 5086888288524335797}
+  _projectile: {fileID: 2443920030917668325, guid: 32e1341272fd64784b8ab932d633638c, type: 3}
+  fireRate: 3
+  nextFire: 5
+  force: 1500
+  turretAnimator: {fileID: 1725675098287118981}
+  lastShootTime: 0
 --- !u!4 &6426709777064267298 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6942294909175551690, guid: a693a725f31144cfe8c936e4d6ba3db6, type: 3}
