@@ -121,6 +121,8 @@ GameObject:
   - component: {fileID: 3068803147885112667}
   - component: {fileID: 156434027}
   - component: {fileID: 156434030}
+  - component: {fileID: 54150960}
+  - component: {fileID: 1650398535}
   m_Layer: 0
   m_Name: LaserWall3
   m_TagString: Untagged
@@ -173,6 +175,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42036db189f74193bbc778acd68dc59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &54150960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068803147885112668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 603a528b5ceaf384e916bf008c546244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lasers: []
+  heightValue: 10.92
+  time: 2
+--- !u!114 &1650398535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068803147885112668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 603a528b5ceaf384e916bf008c546244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lasers: []
+  heightValue: 10.92
+  time: 2
 --- !u!1 &3068803147978007149
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,10 +324,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 0.6
-  MaxDistance: 10
+  MinDistance: 3
+  MaxDistance: 18.71
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -303,23 +335,32 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.3
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -3.3346713
+      outSlope: -3.3346713
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.6
+      value: 0.5
+      inSlope: -0.8336678
+      outSlope: -0.8336678
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.30011982
+      outSlope: -0.30011982
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
