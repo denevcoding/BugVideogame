@@ -31,6 +31,21 @@ public float predictionSphereCastRadius;
 public Transform predictionPoint;
 
 
+ private Animator animator;
+    public GameObject objectToFind;
+    string tagName = "SomeTag";
+
+
+    
+    private void Start()
+   {
+     
+        objectToFind = GameObject.FindGameObjectWithTag(tagName);
+        animator = objectToFind.GetComponent<Animator>();
+    }
+
+
+
 
 void Update()
 {
@@ -58,6 +73,7 @@ void LateUpdate()
         if(GetComponent<Grappling>() != null)
         GetComponent<Grappling>().StopGrapple();
         pm.ResetRestrictions();
+        animator.SetBool("start_swing", true);
 
 
         pm.swinging = true;
@@ -91,6 +107,7 @@ void LateUpdate()
 
         lr.positionCount = 0;
         Destroy(joint);
+         animator.SetBool("start_swing", false);
 
     }
     private Vector3 currentGrappleposition;

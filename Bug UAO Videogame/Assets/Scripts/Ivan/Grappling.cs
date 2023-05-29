@@ -77,6 +77,7 @@ public class Grappling : MonoBehaviour
     
     grappling = true;
     animator.SetBool("Grappling", true);
+    animator.SetBool("falling", false);
 
 
     pm.freeze = true;

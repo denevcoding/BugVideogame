@@ -159,6 +159,7 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
+             animator.SetBool("falling", false);
         }
 
         // Mode - Walking
@@ -166,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.walking;
             moveSpeed = walkSpeed;
+             animator.SetBool("falling", false);
         }
 
         // mode - swinging
@@ -173,13 +175,16 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.swinging;
             moveSpeed = swingSpeed;
+             animator.SetBool("falling", false);
         }
 
         // Mode - Air
         else
         {
             state = MovementState.air;
+             animator.SetBool("falling", true);
         }
+        
     }
 
     private void MovePlayer()
