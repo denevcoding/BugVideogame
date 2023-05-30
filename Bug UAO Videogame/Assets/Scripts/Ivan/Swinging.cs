@@ -14,7 +14,7 @@ public LayerMask whatIsGrappleable;
 public PlayerMovement pm;
 
 [Header("Swinging")]
-private float maxSwingDistance = 25f;
+public float maxSwingDistance = 25f;
 private Vector3 swingPoint;
 private SpringJoint joint;
 
@@ -24,6 +24,8 @@ public Rigidbody rb;
 public float horizontalThrustForce;
 public float forwardThrustForce;
 public float extendCableSpeed;
+public float shortenCableSpeed;
+
 
 [Header("Prediction")]
 public RaycastHit predictionHit;
@@ -145,7 +147,7 @@ void LateUpdate()
             Vector3 directionToPoint = swingPoint - transform.position;
             rb.AddForce(directionToPoint.normalized * forwardThrustForce * Time.deltaTime);
 
-            float distanceFromPoint = Vector3.Distance(transform.position, swingPoint);
+            float distanceFromPoint = Vector3.Distance(transform.position, swingPoint) - shortenCableSpeed;
 
             joint.maxDistance = distanceFromPoint * 0.8f;
             joint.minDistance = distanceFromPoint * 0.25f;
