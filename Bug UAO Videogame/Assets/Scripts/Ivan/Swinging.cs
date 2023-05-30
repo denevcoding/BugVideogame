@@ -74,6 +74,7 @@ void LateUpdate()
         GetComponent<Grappling>().StopGrapple();
         pm.ResetRestrictions();
         animator.SetBool("start_swing", true);
+         animator.SetBool("swinging", true);
 
 
         pm.swinging = true;
@@ -108,6 +109,7 @@ void LateUpdate()
         lr.positionCount = 0;
         Destroy(joint);
          animator.SetBool("start_swing", false);
+          animator.SetBool("swinging", false);
 
     }
     private Vector3 currentGrappleposition;
