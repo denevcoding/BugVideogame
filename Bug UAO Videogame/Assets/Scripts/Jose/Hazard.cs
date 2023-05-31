@@ -16,8 +16,6 @@ public class Hazard : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player"))
         {
-            
-
             // Check if we actually found a player health script
             // This if statement is true if the player variable is NOT null (empty)
             if (player != null)
