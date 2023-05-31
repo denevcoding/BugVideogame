@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9019665083521480775}
   - component: {fileID: 7822755071311392305}
+  - component: {fileID: 7544496442707045747}
+  - component: {fileID: 7315990269570125895}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -131,6 +133,31 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!114 &7544496442707045747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915126049730850084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42036db189f74193bbc778acd68dc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &7315990269570125895
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915126049730850084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07601754, y: 0.07601751, z: 12.076023}
+  m_Center: {x: 0, y: 0, z: 6.000003}
 --- !u!1 &4419354671521786610
 GameObject:
   m_ObjectHideFlags: 0
