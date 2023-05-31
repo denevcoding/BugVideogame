@@ -3874,7 +3874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5086888287179579684, guid: cdaa5b17a28764932937368b696afa75, type: 3}
       propertyPath: howClose
-      value: 18
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5086888287179579684, guid: cdaa5b17a28764932937368b696afa75, type: 3}
       propertyPath: turretAnimator
@@ -5029,15 +5029,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270684894355, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.12218325
+      value: -0.12218327
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270684894355, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000046656496
+      value: -0.00000001250157
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270684894355, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000005743676
+      value: -0.0000000015390133
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270734607157, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16256,7 +16256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5086888287179579684, guid: cdaa5b17a28764932937368b696afa75, type: 3}
       propertyPath: howClose
-      value: 13
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 5086888287179579684, guid: cdaa5b17a28764932937368b696afa75, type: 3}
       propertyPath: turretAnimator
@@ -16364,7 +16364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5086888287179579684, guid: cdaa5b17a28764932937368b696afa75, type: 3}
       propertyPath: howClose
-      value: 13
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 5086888287179579684, guid: cdaa5b17a28764932937368b696afa75, type: 3}
       propertyPath: turretAnimator
@@ -18514,7 +18514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5086888287179579684, guid: cdaa5b17a28764932937368b696afa75, type: 3}
       propertyPath: howClose
-      value: 18
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5086888287179579684, guid: cdaa5b17a28764932937368b696afa75, type: 3}
       propertyPath: turretAnimator
