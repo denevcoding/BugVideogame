@@ -6,55 +6,76 @@ using UnityEngine.VFX;
 
 public class DissolveController : MonoBehaviour
 {
-    public Renderer skinnedMesh;
+    //public Renderer skinnedMesh;
     public VisualEffect VFXGraph;
     public float dissolveRate = 0.0125f;
     public float refreshRate = 0.025f;
     public Material DissolveMat;
 
-    private Material[] skinnedMaterials;
+    //private Material[] skinnedMaterials;
+    public List<Material> allMaterials = new List<Material>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (skinnedMesh != null)
-            skinnedMaterials = skinnedMesh.materials;
-        
-    }
+   
 
-    // Update is called once per frame
-    void Update()
+    public void Dissolve()
     {
-        if(Input.GetKeyDown (KeyCode.Space))
+        SkinnedMeshRenderer[] renderers = GetComponentsInChildren<SkinnedMeshRenderer>();
+        foreach (SkinnedMeshRenderer rendCpomp in renderers)
         {
-            skinnedMesh.material = DissolveMat;
-            StartCoroutine(DissolveCo());
+            Material[] mats = rendCpomp.materials;
+            for (int i = 0; i < rendCpomp.materials.Length; i++)
+            {
+                mats[i] = DissolveMat;
+                allMaterials.Add(mats[i]);
+            }
+
+            rendCpomp.materials = mats;
         }
-        
+
+        //skinnedMesh.material = DissolveMat;
+        StartCoroutine(DissolveCo());
     }
 
-    IEnumerator DissolveCo ()
+
+    IEnumerator DissolveCo()
     {
-        if(VFXGraph != null)
+        if (VFXGraph != null)
         {
             VFXGraph.Play();
         }
 
-        if(skinnedMaterials.Length >0)
+
+
+
+        if (allMaterials.Count > 0)
         {
-            float counter = 0;
-
-            while(skinnedMaterials[0].GetFloat("_DissolveAmount") < 1)
+            for (int i = 0; i < allMaterials.Count; i++)
             {
-                counter += dissolveRate;
-                for(int i=0; i<skinnedMaterials.Length; i++)
+                float counter = 0;
+                while (allMaterials[i].GetFloat("_DissolveAmount") < 1)
                 {
-                    skinnedMaterials[i].SetFloat("_DissolveAmount", counter);
+                    counter += dissolveRate;
+                    allMaterials[i].SetFloat("_DissolveAmount", counter);
+                    yield return new WaitForSeconds(refreshRate);
                 }
-                yield return new WaitForSeconds(refreshRate);
             }
-
-
         }
+
+        //if (skinnedMaterials.Length > 0)
+        //{
+        //    float counter = 0;
+
+        //    while (skinnedMaterials[0].GetFloat("_DissolveAmount") < 1)
+        //    {
+        //        counter += dissolveRate;
+        //        for (int i = 0; i < skinnedMaterials.Length; i++)
+        //        {
+        //            skinnedMaterials[i].SetFloat("_DissolveAmount", counter);
+        //        }
+               
+        //    }
+
+
+        //}
     }
 }
