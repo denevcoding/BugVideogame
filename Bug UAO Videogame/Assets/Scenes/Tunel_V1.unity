@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44659364, g: 0.4964301, b: 0.5748256, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5083,11 +5083,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270816077908, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000037891343
+      value: -0.000000020915325
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270816077908, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000006263349
+      value: -0.0000000034572536
       objectReference: {fileID: 0}
     - target: {fileID: 2433147272051110298, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_Name
@@ -13052,6 +13052,23 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 6658674209116810129, guid: 4d55227e37e68bc4baf009787a244210, type: 3}
   m_PrefabInstance: {fileID: 1118148255}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1118148262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118148256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0486728edb34b11b9f40d9849aa676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinnedMesh: {fileID: 0}
+  VFXGraph: {fileID: 0}
+  dissolveRate: 0.0125
+  refreshRate: 0.025
+  DissolveMat: {fileID: 2100000, guid: 1745522c092374bccbd38851a1845ee5, type: 2}
 --- !u!1001 &1119665119
 PrefabInstance:
   m_ObjectHideFlags: 0

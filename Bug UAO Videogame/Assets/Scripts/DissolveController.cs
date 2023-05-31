@@ -6,10 +6,11 @@ using UnityEngine.VFX;
 
 public class DissolveController : MonoBehaviour
 {
-    public SkinnedMeshRenderer skinnedMesh;
+    public Renderer skinnedMesh;
     public VisualEffect VFXGraph;
     public float dissolveRate = 0.0125f;
     public float refreshRate = 0.025f;
+    public Material DissolveMat;
 
     private Material[] skinnedMaterials;
 
@@ -26,6 +27,7 @@ public class DissolveController : MonoBehaviour
     {
         if(Input.GetKeyDown (KeyCode.Space))
         {
+            skinnedMesh.material = DissolveMat;
             StartCoroutine(DissolveCo());
         }
         
