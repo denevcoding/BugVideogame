@@ -7,6 +7,8 @@ public class Checkpoint : MonoBehaviour
     [SerializeField]GameObject player;
     public Transform lastCheckPoint;
     [SerializeField] Vector3 vectorPoint;
+    public Animator animator;
+    public GameObject deathVFX;
 
     [SerializeField]  float dead;
     // Update is called once per frame
@@ -38,5 +40,8 @@ public class Checkpoint : MonoBehaviour
         //player.GetComponent<CharacterController>().enabled = false;
         player.transform.position = vectorPoint;
         //player.GetComponent<CharacterController>().enabled = true;
+        animator.SetBool("Death", false);
+        deathVFX.GetComponent<ParticleSystem>().Stop();
+        GetComponent<PlayerMovement>().enabled = true;
     }
 }

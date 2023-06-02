@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.002804225, g: 0.0061377855, b: 0.008847448, a: 1}
+  m_IndirectSpecularColor: {r: 0.002776462, g: 0.006140854, b: 0.00883843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5517,15 +5517,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270684894355, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.12218327
+      value: -0.12218325
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270684894355, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000001250157
+      value: -0.000000046656496
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270684894355, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000015390133
+      value: -0.000000005743676
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270734607157, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5569,11 +5569,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270816077908, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000037891347
+      value: -0.000000037891343
       objectReference: {fileID: 0}
     - target: {fileID: 2433147270816077908, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000062633494
+      value: -0.000000006263349
       objectReference: {fileID: 0}
     - target: {fileID: 2433147272051110298, guid: d0486ca745bd3e345ad1262d3ec9d8e5, type: 3}
       propertyPath: m_Name
@@ -14553,6 +14553,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1118148256}
+    - target: {fileID: 7906462062803067852, guid: 4d55227e37e68bc4baf009787a244210, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1417254954}
+    - target: {fileID: 7906462062803067852, guid: 4d55227e37e68bc4baf009787a244210, type: 3}
+      propertyPath: deathVFX
+      value: 
+      objectReference: {fileID: 31368369}
     - target: {fileID: 8024708477899748775, guid: 4d55227e37e68bc4baf009787a244210, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -88.18691
@@ -14669,6 +14677,17 @@ MonoBehaviour:
   refreshRate: 0.025
   DissolveMat: {fileID: 2100000, guid: 1745522c092374bccbd38851a1845ee5, type: 2}
   allMaterials: []
+--- !u!114 &1118148274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7906462062803067852, guid: 4d55227e37e68bc4baf009787a244210, type: 3}
+  m_PrefabInstance: {fileID: 1118148255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118148256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1ae819403e4461f84d3fdb2a8e8b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1119665119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18493,6 +18512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1118148267}
+  checkpoint: {fileID: 1118148274}
 --- !u!4 &1419119605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 408606408876256765, guid: e67ba524f01ef403cb64ca86cec50e49, type: 3}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimManager : MonoBehaviour
 {
     public PlayerHealth playerHealth;
+    public Checkpoint checkpoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,10 @@ public class AnimManager : MonoBehaviour
     public void Death()
     {
         playerHealth.Death();
+    }
+
+    public void CheckPoint()
+    {
+        checkpoint.RespawnOnCheckPoint();
     }
 }
