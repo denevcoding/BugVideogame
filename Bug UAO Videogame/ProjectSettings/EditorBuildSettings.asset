@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tunel_V1.unity
     guid: bfafa49d5e7d7405bab24749b7357101
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: a4cc20b46f0370d46a75aa9cb5a114de
   m_configObjects: {}

@@ -19,7 +19,7 @@ public class Complete : MonoBehaviour
         {
             {
 
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(2);
             }
         }
     }
