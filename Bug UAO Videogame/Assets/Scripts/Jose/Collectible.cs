@@ -15,7 +15,7 @@ public class Collectible : MonoBehaviour
     private int x, y, z;
     public float distance;
 
-    // public AudioSource collectSound;
+    public AudioSource collectSound;
 
 
     private void Start()
@@ -47,7 +47,7 @@ public class Collectible : MonoBehaviour
                 target = other.gameObject;
                 targetpos = other.transform;
                 Debug.Log("Trigger " + gameObject.name);
-                //   collectSound.Play();
+                collectSound.Play();
                 distance = 1f + scoreSystem.score;
                 scoreSystem.AddScore();
                 //Destroy(gameObject);
