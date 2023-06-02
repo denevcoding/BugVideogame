@@ -114,8 +114,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Goten: 0
   target: {fileID: 0}
+  targetpos: {fileID: 0}
   targetPosOffset: {x: 0, y: 0, z: 0}
   offsetToFollow: 2
+  distance: 0
 --- !u!95 &6568693293988696908
 Animator:
   serializedVersion: 4
@@ -157,7 +159,7 @@ AudioSource:
   m_GameObject: {fileID: 6568693293988696899}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 1823225305748841871, guid: bf10e26f32de84d3e9b7c4dc29befb1a, type: 2}
   m_audioClip: {fileID: 8300000, guid: 20257d46495634910a1db1335f77ae23, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

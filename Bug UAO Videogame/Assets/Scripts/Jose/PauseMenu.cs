@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -58,4 +60,6 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         SceneManager.LoadScene("TitleScreen");
     }
+
+
 }
