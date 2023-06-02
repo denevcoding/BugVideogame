@@ -7,6 +7,7 @@ public class Complete : MonoBehaviour
 {
     private ScoringSystem scoreSystem;
     public int objective = 10;
+    public Animator animator;
 
     private void Start()
     {
@@ -15,11 +16,12 @@ public class Complete : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Player") && scoreSystem.score == objective)
+        if (other.gameObject.tag.Equals("Player") && scoreSystem.score >= objective)
         {
             {
-
+                animator.SetTrigger("FadeOut");
                 SceneManager.LoadScene(2);
+
             }
         }
     }
