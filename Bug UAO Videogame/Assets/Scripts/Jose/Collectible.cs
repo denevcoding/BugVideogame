@@ -30,6 +30,7 @@ public class Collectible : MonoBehaviour
     {
 
         Collected();
+
     }
 
 
@@ -74,4 +75,5 @@ public class Collectible : MonoBehaviour
         }
     }
 
+   
 }
